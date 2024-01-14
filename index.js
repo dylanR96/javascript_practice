@@ -37,7 +37,7 @@ listButton.addEventListener('click', function() {
     list.appendChild(newListElement2);
 }); */
 
-let removeButton = document.getElementById("changeList");
+/* let removeButton = document.getElementById("changeList");
 let list = document.getElementById("myList");
 
 let checker = true;
@@ -56,4 +56,14 @@ removeButton.addEventListener("click", function() {
     }
     checker = !checker;
         
+}) */
+
+let newButton = document.getElementById("newButton");
+let firstList = document.getElementById("firstList");
+let secondList = document.getElementById("secondList");
+
+newButton.addEventListener('click', function() {
+    let goneChild = firstList.removeChild(firstList.firstChild);
+    console.log(goneChild);
+    secondList.appendChild(goneChild);
 })
