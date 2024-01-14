@@ -18,7 +18,7 @@ button.addEventListener('click', function() {
 });
 */
 
-let listButton = document.getElementById("changeList");
+/* let listButton = document.getElementById("changeList");
 let list = document.getElementById("myList");
 
 listButton.addEventListener('click', function() {
@@ -30,8 +30,30 @@ listButton.addEventListener('click', function() {
     let childNodes = list.childNodes;
     let newListElement2 = document.createElement("li");
     for (let i = 0; i < childNodes.length; i++) {
+        childNodes[i].textContent = childNodes[i].textContent + "!";
         let newListItem = document.createTextNode(childNodes[i].textContent);
         newListElement2.appendChild(newListItem);
     }
     list.appendChild(newListElement2);
-});
+}); */
+
+let removeButton = document.getElementById("changeList");
+let list = document.getElementById("myList");
+
+let checker = true;
+removeButton.addEventListener("click", function() {
+
+    if(checker) {
+    removeButton.removeChild(list); 
+    
+    }
+    else {
+        let newElement = document.createElement("p");
+        let newElementText = document.createTextNode("I am a new element");
+        newElement.appendChild(newElementText);
+        newElement.setAttribute("id", "myList");
+        document.getElementById("changeList").appendChild(newElement); 
+    }
+    checker = !checker;
+        
+})
