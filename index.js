@@ -64,6 +64,5 @@ let secondList = document.getElementById("secondList");
 
 newButton.addEventListener('click', function() {
     let goneChild = firstList.removeChild(firstList.firstChild);
-    console.log(goneChild);
     secondList.appendChild(goneChild);
 })
