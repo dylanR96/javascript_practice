@@ -81,4 +81,87 @@ for(let i = length; i > length - 8; i--) {
     console.log(strArr[i]);
 }
 
+/* for(let j = 0; j < 1000; j++){
+    console.log(j);
+} */
+
+/* for(let j = 100; j > 0; j--) {
+    console.log(j);
+} */
+
+
+let moreFruits = ['apple', 'orange', 'pear', 'kiwi', 'pineapple'];
+for(let j = 0; j < moreFruits.length; j++) {
+    console.log(j + " " + moreFruits[j]);
+}
+
+let things = ['hammer', 'nails', 'ruler', 'screwdriver', 'screws', 'saw'];
+
+for (let listThings of things)  {
+console.log(listThings);
+}
+
+things.forEach((element, index) => console.log(element, index));
+
+/* let j = 0;
+while( j < 1000) {
+    console.log(j);
+    j++;
+} */
+
+
+
+let friends = [
+    {
+        name: 'Sixten',
+        likes: [
+            'bananas',
+            'strawberries',
+            'blueberries'
+        ]
+    },
+    {
+        name: 'Khalid',
+        likes: [
+            'papaya',
+            'pear',
+            'pineapple'
+        ]
+    },
+    {
+        name: 'Lisa',
+        likes: [
+            'raspberries',
+            'watermelon',
+            'apple'
+        ]
+    }
+]
+
+friends.forEach((friends, likes) => console.log(friends, likes));
+
+let yetMoreFruits = ['apelsin', 'päron', 'äpple', 'kiwi'];
+
+yetMoreFruits.forEach((element, index) => console.log(element, index));
+
+for (let listFruits of yetMoreFruits)  {
+    console.log(listFruits);
+    }
+
+for(let i = 0; i < yetMoreFruits.length; i++){
+    console.log(i + " " + yetMoreFruits[i]);
+}
+
+
+// let numberOfCard = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"];
+let type = ["hearts", "spades", "clubs", "diamonds"];
+let deck = [];
+
+for(let i = 0; i < type.length; i++){
+    for(let j = 1; j <= 13; j++) {
+       deck.push(type[i] + j);
+    } 
+}
+console.log(deck);
+
 
