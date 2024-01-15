@@ -152,8 +152,7 @@ for(let i = 0; i < yetMoreFruits.length; i++){
     console.log(i + " " + yetMoreFruits[i]);
 }
 
-
-// let numberOfCard = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"];
+/*
 let type = ["hearts", "spades", "clubs", "diamonds"];
 let deck = [];
 
@@ -164,4 +163,51 @@ for(let i = 0; i < type.length; i++){
 }
 console.log(deck);
 
+*/
 
+let books = [
+    {
+        title: "Norse Mythology",
+        author: "Neil Gaiman",
+        numpages: "282"
+    },
+    {
+        title: "Offer utan ansikte",
+        author: "Ahnhem",
+        numpages: "589"
+    },
+    {
+        title: "La vida imaginaria",
+        author: "Mara Torres",
+        numpages: "251"
+    },
+];
+
+
+function lookForBook(object, book) {
+    for(let i = 0; i < books.length; i++){
+            if(books[i].title.includes(book)){
+                console.log("Object contains " + book);
+            }
+        }
+    }
+
+lookForBook(books, "Offer utan ansikte");
+
+
+let person = { name: "Dylan", age: "27", city: "Barcelona" };
+
+console.log(person.name);
+console.log(person.age);
+person.age = "28";
+console.log("Happy birthday " + person.age)
+
+person.country = "Spain";
+
+console.log(person);
+
+function greeting() {
+    console.log("Hello there " + person.name + "!");
+}
+
+greeting();
