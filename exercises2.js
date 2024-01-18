@@ -211,3 +211,23 @@ function greeting() {
 }
 
 greeting();
+
+
+let myInput = document.getElementById("myInput");
+let myButton = document.getElementById('myButton')
+myButton.addEventListener("click", letterFrequency);
+
+function letterFrequency() {
+  let myString = myInput.value;
+  let myArray = [];
+  for(element of myString) {
+    element = element.toLowerCase();
+    if(myArray[element]) {
+      myArray[element]++;
+    }
+    else {
+      myArray[element] = 1;
+    }
+  }
+  console.log(myArray);
+}
