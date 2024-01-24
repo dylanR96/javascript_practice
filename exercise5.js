@@ -56,10 +56,26 @@ function giveBack(value) {
 simulateAsyncOperation(155, giveBack);
 
 //Exercise 5
-// function somethingWrong(callback){
-    
-//     callback(null,)
-// }
+function somethingWrong(callback){
+    let error = "Error found!";
+    let result = "You got it!";
+    let num = Math.floor(Math.random() * 10);
+    if(num == 3) {
+        callback(error);;
+    } else {
+        callback(result);;
+    }
+}
+
+function callback(error, result) {
+    if(error) {
+       console.log(error);
+    } else {
+    console.log(result);
+    }
+}
+
+somethingWrong(callback);
 
 
 //Exercise 6
@@ -68,11 +84,11 @@ function addEvent(callback){
    myButton.addEventListener('click', callback);
 }
 
-function callback(){
+function change(){
     document.getElementById("myButton").style.color = "red";
 }
 
-addEvent(callback);
+addEvent(change);
 
 
 //Level-Up
