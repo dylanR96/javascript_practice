@@ -2,10 +2,10 @@
 // Exercise 1
 function printer(string) {
     let text = string;
-    console.log(text.length);
+    return text.length;
 }
 
-printer("Hi there!");
+console.log(printer("Hi there!"));
 
 // Exercise 2
 function date(date) {
@@ -22,7 +22,7 @@ function addition(a, b) {
     console.log(c);
  }
  
- function multiplication(a, b) {
+ function multiplication(a, b){
      let c = a * b;
      console.log(c);
  }
@@ -142,42 +142,52 @@ let destinations = [
     {Name: 'Spain', Continent: 'Europe'},
 ]
 
-function printCountry(countryArray){
-    for(let i = 0; i < countryArray.length; i++) {
-        console.log(countryArray[i].Name);
-    }
-}
+//Exercise 10.1
+let everyCountry = destinations.map((country) => country.Name);
+console.log(everyCountry);
 
-function printContinent(countryArray){
-    for(let i = 0; i < countryArray.length; i++) {
-        console.log(countryArray[i].Continent);
-    }
-}
+//Exercise 10.2
+let everyContinent = destinations.map((country) => country.Continent);
+console.log(everyContinent);
 
-function specificCountry(countryArray) {
-    for(let i = 0; i < countryArray.length; i++) {
-        if(countryArray[i].Continent == 'Europe') {
-            console.log(countryArray[i].Name);
-        }
-    }
-}
+//Exercise 10.3
 
-function search(countryArray, search) {
-    let foundIt = false;
-    for(let i = 0; i < countryArray.length; i++) {
-        if(countryArray[i].Continent == search || countryArray[i].Name == search) {
-            foundIt = true;
-        }
-    }
-    if(foundIt == true) {
-        console.log(`We found ${[search]} in the list, congrats!`);
-    } else {
-        console.log(`We did not find ${[search]} in the list, sorry!`)
-    }
 
-}
+// function printCountry(countryArray){
+//     for(let i = 0; i < countryArray.length; i++) {
+//         console.log(countryArray[i].Name);
+//     }
+// }
 
-printCountry(destinations);
-printContinent(destinations);
-specificCountry(destinations);
-search(destinations, prompt());
+// function printContinent(countryArray){
+//     for(let i = 0; i < countryArray.length; i++) {
+//         console.log(countryArray[i].Continent);
+//     }
+// }
+
+// function specificCountry(countryArray) {
+//     for(let i = 0; i < countryArray.length; i++) {
+//         if(countryArray[i].Continent == 'Europe') {
+//             console.log(countryArray[i].Name);
+//         }
+//     }
+// }
+
+// function search(countryArray, search) {
+//     let foundIt = false;
+//     for(let i = 0; i < countryArray.length; i++) {
+//         if(countryArray[i].Continent == search || countryArray[i].Name == search) {
+//             foundIt = true;
+//         }
+//     }
+//     if(foundIt == true) {
+//         console.log(`We found ${[search]} in the list, congrats!`);
+//     } else {
+//         console.log(`We did not find ${[search]} in the list, sorry!`)
+//     }
+
+// }
+
+// printContinent(destinations);
+// specificCountry(destinations);
+// search(destinations, prompt());

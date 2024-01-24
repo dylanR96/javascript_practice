@@ -185,9 +185,9 @@ let books = [
 
 
 function lookForBook(object, book) {
-    for(let i = 0; i < books.length; i++){
+    for(let i = 0; i < object.length; i++){
             if(books[i].title.includes(book)){
-                console.log("Object contains " + book);
+                console.log(object + "contains" + book);
             }
         }
     }

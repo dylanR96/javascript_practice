@@ -1,0 +1,11 @@
+#myImage {
+    border: 10px solid purple;
+    
+}
+
+.myDivs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    }
