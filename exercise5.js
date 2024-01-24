@@ -63,7 +63,7 @@ function somethingWrong(callback){
     if(num == 3) {
         callback(error);;
     } else {
-        callback(result);;
+        callback(null, result);;
     }
 }
 
